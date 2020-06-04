@@ -26,3 +26,18 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+/**
+ * Adda a random greet to the page.
+ */
+function addRandomFact() {
+    const facts = 
+        ['My favorite color is blue', 'My favorite animal are dolphins', 'I have two older sisters and a younger brother',
+        'I do not like ice cream actually', 'I love watching YouTube and Netflix', 'I played the violin for 10 years'];
+
+    // Pick a random quote.
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+
+    // Add fact to the page.
+    const factContainer = document.getElementById('fact-container');
+    factContainer.innerText = fact;
+}
