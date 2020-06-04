@@ -31,8 +31,12 @@ function addRandomGreeting() {
  */
 function addRandomFact() {
     const facts = 
-        ['My favorite color is blue', 'My favorite animal are dolphins', 'I have two older sisters and a younger brother',
-        'I do not like ice cream actually', 'I love watching YouTube and Netflix', 'I played the violin for 10 years'];
+        ['I am interning at JPMorgan Chase this summer!', 
+        'I am the Secretary of my schools National Society of Black Engineers Chapter.', 
+        "I am the Corporate Relations Director for my school's Society of Women Engineers Chapter.",
+        'I am a Rewriting the Code Fellow.', 
+        'I am an academic excellence workshop facilitator for Object-Oriented Programming and Data Structures.', 
+        'I am a tutor for Object-Oriented Programming and Data Structures.'];
 
     // Pick a random quote.
     const fact = facts[Math.floor(Math.random() * facts.length)];

@@ -4,9 +4,23 @@
   width: 650px;
 } */
 
-#title {
-    font-family:'Courier New', Courier, monospace;
-    color:aqua;
+/* #title {
+    font-family:cursive;
+    color:rgb(245, 114, 238);
+} */
+
+#projects {
+    text-align: justify;
+    text-align-last: left;
+    width: 600px;
+    word-wrap: keep-all;
+    display: inline-block;
+}
+
+#socials {
+    text-align: justify;
+    text-align-last: center;
+    display: inline-block;
 }
 
 #greeting-container {
