@@ -36,12 +36,31 @@ function addRandomFact() {
         "I am the Corporate Relations Director for my school's Society of Women Engineers Chapter.",
         'I am a Rewriting the Code Fellow.', 
         'I am an academic excellence workshop facilitator for Object-Oriented Programming and Data Structures.', 
-        'I am a tutor for Object-Oriented Programming and Data Structures.'];
+        'I am a tutor for Object-Oriented Programming and Data Structures.',
+        'My favorite coding language is Java!'];
 
-    // Pick a random quote.
+    // Pick a random fact.
     const fact = facts[Math.floor(Math.random() * facts.length)];
 
     // Add fact to the page.
     const factContainer = document.getElementById('fact-container');
     factContainer.innerText = fact;
 }
+
+/**
+ * Adds a random quote of the day to the page.
+ */
+ function addRandomQuote() {
+     const quotes = 
+     ['Every moment is a fresh beginning. – T.S Eliot',
+     'Die with memories, not dreams. – Unknown',
+     'Whatever you do, do it well. – Walt Disney',
+     'If I’m gonna tell a real story, I’m gonna start with my name. – Kendrick Lamar'];
+
+    //Pick a random quote.
+    const quote = quotes[Math.floor(Math.random()* quotes.length)];
+
+    //Add qutoe to page.
+    const quoteContainer = document.getElementById('quote-container');
+    quoteContainer.innerText = quote;
+ }

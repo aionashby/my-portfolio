@@ -111,7 +111,7 @@ body {
 }
 </style>
 </head>
-<body>
+<body onload="addRandomQuote()">
 
 <div class="header">
 <div id = "title">
@@ -121,10 +121,12 @@ body {
 </div>
 
 <div class="navbar">
-  <a href="https://www.linkedin.com/in/aionashby/">LinkedIn</a>
-  <a href="https://github.com/aionashby/">GitHub</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
+<div id = "socials">
+  <a href="https://www.linkedin.com/in/aionashby/" target = "_blank">LinkedIn</a>
+  <a href="https://github.com/aionashby/" target = "_blank">GitHub</a>
+  <a href="https://docs.google.com/document/d/1sh40I4FLunqtnRhoBXvaTj_U80Otq1F2pe7nibm1xss/edit?usp=sharing" 
+        target = "_blank">Resume</a>
+</div>
 </div>
 
 <div class="row">
@@ -174,15 +176,25 @@ body {
     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     <br>
     <h2>TITLE HEADING</h2>
+    <div class="pictures">
+        <div class="picture">
+            <img src="/images/friends.JPG" alt="Friends" style="width:100%">
+        </div>
+        <div class="picture">
+            <img src="/images/parents.JPG" alt="Parents" style="width:100%">
+        </div>
+            <div class="picture">
+        <img src="/images/AutumnE.jpg" alt="Friends2" style="width:100%">
+        </div>
+    </div>
     <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
     <p>Some text..</p>
     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
   </div>
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <h2 id = "quote-container"></h2>
 </div>
 
 </body>

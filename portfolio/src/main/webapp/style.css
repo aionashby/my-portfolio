@@ -26,3 +26,12 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+.pictures {
+  display: flex;
+}
+
+.picture {
+  flex: 33.33%;
+  padding: 5px;
+}
