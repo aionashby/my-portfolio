@@ -1,7 +1,12 @@
-#content {
+/* #content {
   margin-left: auto;
   margin-right: auto;
   width: 650px;
+} */
+
+#title {
+    font-family:'Courier New', Courier, monospace;
+    color:aqua;
 }
 
 #greeting-container {

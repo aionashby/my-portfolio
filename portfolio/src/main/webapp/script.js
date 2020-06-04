@@ -27,7 +27,7 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 /**
- * Adda a random greet to the page.
+ * Adds a random fact to the page.
  */
 function addRandomFact() {
     const facts = 
