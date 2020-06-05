@@ -26,3 +26,103 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+/**
+ * Adds a random fact to the page.
+ */
+function addRandomFact() {
+    const facts = 
+        ['I am interning at JPMorgan Chase this summer!', 
+        'I am the Secretary of my schools National Society of Black Engineers Chapter.', 
+        "I am the Corporate Relations Director for my school's Society of Women Engineers Chapter.",
+        'I am a Rewriting the Code Fellow.', 
+        'I am an academic excellence workshop facilitator for Object-Oriented Programming and Data Structures.', 
+        'I am a tutor for Object-Oriented Programming and Data Structures.',
+        'My favorite coding language is Java!'];
+
+    // Pick a random fact.
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+
+    // Add fact to the page.
+    const factContainer = document.getElementById('fact-container');
+    factContainer.innerText = fact;
+}
+
+/**
+ * Adds a random quote of the day to the page.
+ */
+ function addRandomQuote() {
+     const quotes = 
+     ['Every moment is a fresh beginning. – T.S Eliot',
+     'Die with memories, not dreams. – Unknown',
+     'Whatever you do, do it well. – Walt Disney',
+     'If I’m gonna tell a real story, I’m gonna start with my name. – Kendrick Lamar'];
+
+    //Pick a random quote.
+    const quote = quotes[Math.floor(Math.random()* quotes.length)];
+
+    //Add quote to page.
+    const quoteContainer = document.getElementById('quote-container');
+    quoteContainer.innerText = quote;
+
+    addTypewriterEffect();
+ }
+
+ /**
+  * Adds a typewriter effect to text.
+  */
+var i = 0;
+var txt = 'Aion Ashby\'s Portfolio';
+var speed = 150;
+
+function addTypewriterEffect() {
+  if (i < txt.length) {
+    document.getElementById("title").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(addTypewriterEffect, speed);
+  }
+}
+
+// /**
+//  * Adds photos to the page.
+//  */
+// var accFam = 0;
+// var accFriends = 0;
+
+// function photos() {
+//     const picturesFam = 
+//     ['/images/parents.JPG','/images/wright.JPG','/images/wedding.jpg','/images/johns.jpg',
+//     '/images/fam.JPG','/images/dad.JPG','/images/cousins.jpg','/images/beyonce.JPG','/images/alli.jpg'];
+
+//     const picturesFriends =
+//     ['/images/friends.JPG', '/images/cali.JPG', '/images/brooklyn.jpg','/images/arm.jpg','/images/f1.JPG',
+//     '/images/hacakthon.JPG','/images/homecoming.jpg','/images/niagara.JPG'];
+
+//     const imgElementFam = document.createElement('img');
+//     if (accFam == picturesFam.length) {
+//         accFam = 0; 
+//     }
+//     imgElementFam.src = picturesFam[accFam];
+//     imgElementFam.style = "width:300px;height:300px;object-fit:cover";
+//     accFam++;
+//     const imageContainerFam = document.getElementById('picture-fam-container');
+
+//     // Remove the previous image.
+//     imageContainerFam.innerHTML = '';
+//     imageContainerFam.appendChild(imgElementFam);
+
+//     const imgElementFriends = document.createElement('img');
+//     if (accFriends == picturesFriends.length) {
+//         accFriends = 0; 
+//     }
+//     imgElementFriends.src = picturesFriends[accFriends];
+//     imgElementFriends.style = "width:300px;height:300px;object-fit:cover";
+//     accFriends++;
+//     const imageContainerFriends = document.getElementById('picture-friends-container');
+
+//     // Remove the previous image.
+//     imageContainerFriends.innerHTML = '';
+//     imageContainerFriends.appendChild(imgElementFriends);
+
+
+// }
+  
