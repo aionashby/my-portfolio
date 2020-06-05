@@ -60,7 +60,69 @@ function addRandomFact() {
     //Pick a random quote.
     const quote = quotes[Math.floor(Math.random()* quotes.length)];
 
-    //Add qutoe to page.
+    //Add quote to page.
     const quoteContainer = document.getElementById('quote-container');
     quoteContainer.innerText = quote;
+
+    addTypewriterEffect();
  }
+
+ /**
+  * Adds a typewriter effect to text.
+  */
+var i = 0;
+var txt = 'Aion Ashby\'s Portfolio';
+var speed = 150;
+
+function addTypewriterEffect() {
+  if (i < txt.length) {
+    document.getElementById("title").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(addTypewriterEffect, speed);
+  }
+}
+
+// /**
+//  * Adds photos to the page.
+//  */
+// var accFam = 0;
+// var accFriends = 0;
+
+// function photos() {
+//     const picturesFam = 
+//     ['/images/parents.JPG','/images/wright.JPG','/images/wedding.jpg','/images/johns.jpg',
+//     '/images/fam.JPG','/images/dad.JPG','/images/cousins.jpg','/images/beyonce.JPG','/images/alli.jpg'];
+
+//     const picturesFriends =
+//     ['/images/friends.JPG', '/images/cali.JPG', '/images/brooklyn.jpg','/images/arm.jpg','/images/f1.JPG',
+//     '/images/hacakthon.JPG','/images/homecoming.jpg','/images/niagara.JPG'];
+
+//     const imgElementFam = document.createElement('img');
+//     if (accFam == picturesFam.length) {
+//         accFam = 0; 
+//     }
+//     imgElementFam.src = picturesFam[accFam];
+//     imgElementFam.style = "width:300px;height:300px;object-fit:cover";
+//     accFam++;
+//     const imageContainerFam = document.getElementById('picture-fam-container');
+
+//     // Remove the previous image.
+//     imageContainerFam.innerHTML = '';
+//     imageContainerFam.appendChild(imgElementFam);
+
+//     const imgElementFriends = document.createElement('img');
+//     if (accFriends == picturesFriends.length) {
+//         accFriends = 0; 
+//     }
+//     imgElementFriends.src = picturesFriends[accFriends];
+//     imgElementFriends.style = "width:300px;height:300px;object-fit:cover";
+//     accFriends++;
+//     const imageContainerFriends = document.getElementById('picture-friends-container');
+
+//     // Remove the previous image.
+//     imageContainerFriends.innerHTML = '';
+//     imageContainerFriends.appendChild(imgElementFriends);
+
+
+// }
+  
