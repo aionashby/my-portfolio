@@ -65,6 +65,7 @@ function addRandomFact() {
     quoteContainer.innerText = quote;
 
     addTypewriterEffect();
+    getHelloName();
  }
 
  /**
@@ -125,4 +126,15 @@ function addTypewriterEffect() {
 
 
 // }
+
+/**
+ * Another way to use fetch is by using the async and await keywords. This
+ * allows you to use the return values directly instead of going through
+ * Promises.
+ */
+async function getHelloName() {
+  const response = await fetch('/data');
+  const name = await response.text();
+  document.getElementById('name-container').innerText = name;
+}
   
