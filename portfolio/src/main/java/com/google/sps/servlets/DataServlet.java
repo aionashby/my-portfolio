@@ -15,8 +15,6 @@
 package com.google.sps.servlets;
 
 import java.io.IOException;
-import com.google.gson.Gson;
-import java.util.ArrayList;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,22 +24,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
-  private ArrayList<String> lst;
- 
-  @Override
-  public void init() {
-        lst = new ArrayList<>();
-        lst.add("This looks nice!");
-        lst.add("Keep working on it.");
-        lst.add("Add more tabs and interactiveness!");
-  }
-
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Gson gson = new Gson();
-    String json = gson.toJson(lst);
-
-    response.setContentType("application/json;");
-    response.getWriter().println(json);
+    response.setContentType("text/html;");
+    response.getWriter().println("<h1>Hello world!</h1>");
   }
 }

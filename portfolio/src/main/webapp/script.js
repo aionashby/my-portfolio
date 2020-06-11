@@ -65,7 +65,6 @@ function addRandomFact() {
     quoteContainer.innerText = quote;
 
     addTypewriterEffect();
-    getComments();
  }
 
  /**
@@ -126,30 +125,4 @@ function addTypewriterEffect() {
 
 
 // }
-
-/**
- * Another way to use fetch is by using the async and await keywords. This
- * allows you to use the return values directly instead of going through
- * Promises.
- */
-async function getComments() {
-  const response = await fetch('/data');
-  const statement = await response.text();
-  console.log('Fetching  statement ' + statement);
-  document.getElementById('name-container').innerText = statement;
-
-  fetch('/data').then(response => response.json()).then((statement) => {
-      const commentListElement = document.getElementById('name-container');
-      commentListElement.innerHTML = '';
-      commentListElement.appendChild(createListElement(statement[0]));
-      commentListElement.appendChild(createListElement(statement[1]));
-      commentListElement.appendChild(createListElement(statement[2]));
-  });
-}
-
-function createListElement(text) {
-  const liElement = document.createElement('li');
-  liElement.innerText = text;
-  return liElement;
-}
   
