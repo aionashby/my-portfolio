@@ -141,9 +141,17 @@ async function getComments() {
   fetch('/data').then(response => response.json()).then((statement) => {
       const commentListElement = document.getElementById('name-container');
       commentListElement.innerHTML = '';
-      commentListElement.appendChild(createListElement(statement[0]));
-      commentListElement.appendChild(createListElement(statement[1]));
-      commentListElement.appendChild(createListElement(statement[2]));
+      var x = 0;
+      if (x < statement.length) {
+         commentListElement.appendChild(createListElement(statement[x]));
+         x++; 
+      }
+    //   for (x = 0; x < statement.length; s++) {
+    //       commentListElement.appendChild(createListElement(statement[x]));
+    //   }
+    //   commentListElement.appendChild(createListElement(statement[0]));
+    //   commentListElement.appendChild(createListElement(statement[1]));
+    //   commentListElement.appendChild(createListElement(statement[2]));
   });
 }
 
