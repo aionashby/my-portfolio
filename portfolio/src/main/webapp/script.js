@@ -127,31 +127,17 @@ function addTypewriterEffect() {
 
 // }
 
-/**
- * Another way to use fetch is by using the async and await keywords. This
- * allows you to use the return values directly instead of going through
- * Promises.
- */
-async function getComments() {
-  const response = await fetch('/data');
-  const statement = await response.text();
-  console.log('Fetching  statement ' + statement);
-  document.getElementById('name-container').innerText = statement;
 
-  fetch('/data').then(response => response.json()).then((statement) => {
-      const commentListElement = document.getElementById('name-container');
-      commentListElement.innerHTML = '';
-      var x = 0;
-      if (x < statement.length) {
-         commentListElement.appendChild(createListElement(statement[x]));
-         x++; 
-      }
-    //   for (x = 0; x < statement.length; s++) {
-    //       commentListElement.appendChild(createListElement(statement[x]));
-    //   }
-    //   commentListElement.appendChild(createListElement(statement[0]));
-    //   commentListElement.appendChild(createListElement(statement[1]));
-    //   commentListElement.appendChild(createListElement(statement[2]));
+function getComments() {
+//   const response = await fetch('/data');
+//   const statement = await response.text();
+//   console.log('Fetching  statement ' + statement);
+//   document.getElementById('name-container').innerText = statement;
+  fetch('/data').then(response => response.json()).then((comms) => {
+    const commentListElement = document.getElementById('comment-list');
+    comms.forEach((c) => {
+        commentListElement.appendChild(createListElement(c));
+    });
   });
 }
 
