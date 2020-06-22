@@ -66,6 +66,7 @@ function addRandomFact() {
 
     addTypewriterEffect();
     getComments();
+    // createMap();
  }
 
  /**
@@ -145,5 +146,16 @@ function createListElement(text) {
   const liElement = document.createElement('li');
   liElement.innerText = text;
   return liElement;
+}
+
+/** Creates a map and adds it to the page. */
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 29.9792, lng: 31.1342}, zoom: 16});
+
+    // Add statement to page.
+    const visitContainer = document.getElementById('visit-container');
+    visitContainer.innerText = "Did you guess Egypt? I want to visit Egypt so much, so that I can see the pyramids!";
 }
   

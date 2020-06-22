@@ -36,3 +36,9 @@
   padding: 5px;
   /* object-fit: contain; */
 }
+
+#map {
+  /* border: thin solid black; */
+  height: 300px;
+  width: 350px;
+}
