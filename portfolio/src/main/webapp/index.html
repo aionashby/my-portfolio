@@ -105,8 +105,6 @@ body {
 </style>
 </head>
 <body onload="addRandomQuote()">
-<div id="name-container"></div>
-
 <div class="header">
   <h1 id = "title"></h1>
   <p>Welcome to my personal portfolio! I hope you enjoy!</p>
@@ -186,6 +184,15 @@ body {
             <img src="/images/AutumnE.jpg" alt="Friends2" style="width:100%">
             </div>
     </div>
+    <form action="data" method="POST">
+
+    <h2>Comments:</h2>
+    <input type="text" name="comments">
+    <br/><br/>
+
+    <input type="submit" />
+</form>
+<p id="comment-list"></p>
   </div>
 </div>
 
