@@ -15,9 +15,30 @@
 package com.google.sps;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 public final class FindMeetingQuery {
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
-    throw new UnsupportedOperationException("TODO: Implement this method.");
+    // throw new UnsupportedOperationException("TODO: Implement this method.");
+    HashSet<TimeRange> possibleTimes = new HashSet<TimeRange>();
+    possibleTimes.add(TimeRange.fromStartDuration(100, 50));
+    for (Event e : events) {
+        boolean isBusy = false;
+        for (String a : request.getAttendees()) {
+            for (String people : e.getAttendees()) {
+                if (a.equals(e)) {
+                    isBusy = true;
+                }
+            }
+        }
+        if (!isBusy) {
+            possibleTimes.add(TimeRange.fromStartDuration(e.getWhen().start(), (int)request.getDuration()));
+        }
+    }
+    // int begin = TimeRange.START_OF_DAY;
+    // while (begin < TimeRange.END_OF_DAY) {
+
+    // }
+    return possibleTimes;
   }
 }
