@@ -104,7 +104,7 @@ body {
 }
 </style>
 </head>
-<body onload="addRandomQuote()">
+<body onload="addRandomQuote();">
 <div class="header">
   <h1 id = "title"></h1>
   <p>Welcome to my personal portfolio! I hope you enjoy!</p>
@@ -148,7 +148,17 @@ body {
         Click the button below to learn a hidden fact about me!
     </p>
     <button onclick="addRandomFact()">Learn</button>
+    <p></p>
+    <p></p>
     <div id="fact-container"></div>
+    <h3>Can you guess where I want to visit one day?</h3>
+    <p>Leave a comment with your guess, then click the button to reveal!</p>
+    <button onclick = "createMap()">Learn</button>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9UfOKDWE0uV-vpcoTJu8-9BGHNe4cQRE"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <div id="visit-container"></div>
   </div>
   <div class="main">
     <h2>Projects</h2>
@@ -187,12 +197,14 @@ body {
     <form action="data" method="POST">
 
     <h2>Comments:</h2>
+    <p>Leave a comment!</p>
     <input type="text" name="comments">
     <br/><br/>
 
     <input type="submit" />
 </form>
 <p id="comment-list"></p>
+  </body>
   </div>
 </div>
 
